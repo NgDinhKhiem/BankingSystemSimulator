@@ -25,7 +25,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mrnatsu</groupId>
-            <artifactId>SocketManagement-Core</artifactId>
+            <artifactId>BankSystemSimulator-Core</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
