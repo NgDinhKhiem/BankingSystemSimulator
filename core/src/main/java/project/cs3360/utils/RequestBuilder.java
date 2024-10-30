@@ -24,16 +24,14 @@ public class RequestBuilder {
         this.parameters.add(para);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //https://example.com/
-        RequestBuilder rb = new RequestBuilder("http://localhost:8080/hello",new RequestParameter("id","1234312"),new RequestParameter("token","9474895"),new RequestParameter("khiem","7483974"));
+        RequestBuilder rb = new RequestBuilder("http://localhost:8080/hello", new RequestParameter("id", "1234312"), new RequestParameter("token", "9474895"), new RequestParameter("khiem", "7483974"));
         System.out.println(rb.getRequest());
-        CompletableFuture cf = HttpUtils.sendGETRequest("http://localhost:8080/hello").thenAccept((res)->{System.out.println(res);});
+        CompletableFuture cf = HttpUtils.sendGETRequest("http://localhost:8080/hello").thenAccept((res) -> {
+            System.out.println(res);
+        });
         cf.join();
-        for (int i = 0; i < 10 ;i++) {
-            CompletableFuture cf2 = HttpUtils.sendGETRequest("https://example.com/").thenAccept((res)->{System.out.println(i + res);});
-            cf2.join();
-
     }
 
     public String getRequest(){

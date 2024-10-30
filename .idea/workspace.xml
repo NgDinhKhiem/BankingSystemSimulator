@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/src/main/java/project/cs3360/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/project.cs3360/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/object/RequestMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/object/RequestParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/utils/RequestBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Database/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/project/cs3360/utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/utils/HttpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/project/cs3360/utils/RequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/utils/RequestBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
