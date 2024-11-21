@@ -2,6 +2,7 @@ package project.cs3360.utils;
 
 import project.cs3360.object.RequestParameter;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,12 +29,23 @@ public class RequestBuilder {
         //https://example.com/
         RequestBuilder rb = new RequestBuilder("http://localhost:8080/hello", new RequestParameter("id", "1234312"), new RequestParameter("token", "9474895"), new RequestParameter("khiem", "7483974"));
         System.out.println(rb.getRequest());
-        CompletableFuture cf = HttpUtils.sendGETRequest("http://localhost:8080/hello").thenAccept((res) -> {
-            System.out.println(res);
-        });
-        cf.join();
-    }
+        long start = System.currentTimeMillis();
 
+        List<CompletableFuture<Void>> futures = new ArrayList<>();
+        for(int i = 1; i <= 20; i++) {
+            System.out.println("Starting request: " + i);
+            CompletableFuture<Void> future = CompletableFuture.runAsync(new myThread(i));
+            futures.add(future);
+
+        }
+
+        CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+        System.out.println("All requests completed");
+        long totalTime = System.currentTimeMillis() - start;
+        System.out.println("System Running: " + totalTime);
+
+
+    }
     public String getRequest(){
         int count = 0;
         StringBuilder uriStringBuilder = new StringBuilder(uri);
