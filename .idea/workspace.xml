@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/myThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AuthenticationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/RequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/RequestBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/myThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +78,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.RequestBuilder">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BankSystemSimulator-DB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BankSystemSimulator-DB" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HttpUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.cs3360.utils.HttpUtils" />
       <module name="BankSystemSimulator-Core" />
@@ -104,19 +126,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

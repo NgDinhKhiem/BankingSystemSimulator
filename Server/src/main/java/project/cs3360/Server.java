@@ -10,6 +10,31 @@ import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 
 public class Server {
+    private final int port;
+    private final HttpServer server;
+    private boolean isStarted = false;
+
+    public Server(int port) throws IOException {
+        this.port = port;
+        this.server = HttpServer.create(new InetSocketAddress(port),0);
+        this.registerContexts();
+    }
+
+    private void registerContexts(){
+
+    }
+
+    private void registerHandler(String route, HttpHandler handler){
+        this.server.createContext(route, handler);
+    }
+
+    public void start(){
+        if(isStarted)
+            return;
+        server.start();
+        isStarted = true;
+    }
+
     public static void main(String[] args){
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(8080),0);
