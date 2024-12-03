@@ -9,7 +9,7 @@ public class AccountBalanceResponse extends AbstractResponse{
         this.balance = balance;
     }
 
-    public AccountBalanceResponse() {
+    protected AccountBalanceResponse() {
         this.state = false;
         this.balance = 0;
     }

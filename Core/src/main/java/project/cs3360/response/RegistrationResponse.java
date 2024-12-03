@@ -9,7 +9,7 @@ public class RegistrationResponse extends AbstractResponse{
         this.ID = ID;
     }
 
-    public RegistrationResponse() {
+    protected RegistrationResponse() {
         this.state = false;
         this.ID = "";
     }

@@ -9,7 +9,7 @@ public class AccountVerificationResponse extends AbstractResponse{
         this.receiverName = receiverName;
     }
 
-    public AccountVerificationResponse() {
+    protected AccountVerificationResponse() {
         this.state = false;
         this.receiverName = "";
     }

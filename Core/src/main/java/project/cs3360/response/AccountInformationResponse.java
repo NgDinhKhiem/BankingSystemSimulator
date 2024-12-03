@@ -17,7 +17,7 @@ public class AccountInformationResponse extends AbstractResponse{
         this.phoneNumber = phoneNumber;
     }
 
-    public AccountInformationResponse(){
+    protected AccountInformationResponse(){
         this.state = false;
         this.ID = "";
         this.firstName = "";

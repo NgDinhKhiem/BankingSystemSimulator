@@ -5,7 +5,7 @@ import project.cs3360.utils.JSONBuilder;
 
 import java.lang.reflect.Field;
 
-import static project.cs3360.socketserver.utils.Utils.joinString;
+import static project.cs3360.utils.Utils.joinString;
 
 public abstract class AbstractResponse {
     private static final String delimiter = "<CA>";

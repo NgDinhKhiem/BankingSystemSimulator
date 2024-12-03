@@ -8,7 +8,7 @@ import project.cs3360.response.AuthenticationResponse;
 
 public class AuthenticationHandler extends AbstractHandler{
     @Param
-    private String username;
+    private String ID;
     @Param
     private String password;
     public AuthenticationHandler(Server server) {
@@ -16,6 +16,6 @@ public class AuthenticationHandler extends AbstractHandler{
     }
     @Override
     protected Response resolve() {
-        return new Response(ResponseCode.GOOD, new AuthenticationResponse(true,"HelloToken"));
+        return new Response(ResponseCode.GOOD, server.getDataManager().getAuthenticationResponse(ID, password));
     }
 }

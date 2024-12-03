@@ -6,7 +6,7 @@ public class SendingMoneyResponse extends AbstractResponse{
         this.state = state;
     }
 
-    public SendingMoneyResponse() {
+    protected SendingMoneyResponse() {
         this.state = false;
     }
 

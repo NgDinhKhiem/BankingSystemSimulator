@@ -21,6 +21,6 @@ public class AccountRegisterHandler extends AbstractHandler{
 
     @Override
     protected Response resolve() {
-        return new Response(ResponseCode.ACCEPT, null);
+        return new Response(ResponseCode.ACCEPT, server.getDataManager().getRegistrationResponse(firstName,lastName,phoneNumber,email));
     }
 }

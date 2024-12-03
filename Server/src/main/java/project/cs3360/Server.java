@@ -14,7 +14,7 @@ public class Server {
     private final int port;
     private final HttpServer server;
     private boolean isStarted = false;
-    private final DataManager dataManager = new DataManager();
+    private final DataManager dataManager = new DataManager(this);
     private final ExecutorService executorService = Executors.newCachedThreadPool();
 
     public Server(int port) throws IOException {

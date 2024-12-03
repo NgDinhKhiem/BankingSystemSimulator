@@ -9,7 +9,7 @@ public class AuthenticationResponse extends AbstractResponse{
         this.token = token;
     }
 
-    public AuthenticationResponse() {
+    protected AuthenticationResponse() {
         this.state = false;
         this.token = "";
     }
