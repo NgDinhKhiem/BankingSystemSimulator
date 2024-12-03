@@ -31,6 +31,7 @@ public abstract class AbstractHandler implements HttpHandler {
             Class<? extends AbstractHandler> child = this.getClass();
             List<Field> fields = new java.util.ArrayList<>((List.of(child.getDeclaredFields())));
             fields.removeIf(field -> !field.isAnnotationPresent(Param.class));
+            System.out.println(exchange.getRequestURI()+ " "+this.getClass().getSimpleName());
             if(paras.size()!=fields.size()) {
                 System.out.println("SIZE DIFFERENT");
                 exchange.sendResponseHeaders(ResponseCode.BAD_REQUEST.getCode(), -1);
@@ -38,7 +39,10 @@ public abstract class AbstractHandler implements HttpHandler {
             }
             for(Field field:fields){
                 if(!paras.containsKey(field.getName())){
-                    System.out.println("INVALID FIELDS");
+                    for(String key: paras.keySet()){
+                        System.out.print(key+ " ");
+                    }
+                    System.out.println("INVALID FIELDS "+field.getName());
                     exchange.sendResponseHeaders(ResponseCode.BAD_REQUEST.getCode(), -1);
                     return;
                 }

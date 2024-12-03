@@ -5,37 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/handler/IgnoreSelf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/handler/PacketHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/handler/PacketListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/handler/Priority.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/packet/Packet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/packet/PlayerLoginChildPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/packet/PlayerLoginPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/packet/PlayerLogoutPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/socket/ClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/socket/ServerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/socket/SocketClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/socket/SocketServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/utils/SortedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/socketserver/utils/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountBalanceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountBalanceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountInformationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountInformationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountVerificationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AccountVerificationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AuthenticationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/AuthenticationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/Fetch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/FunctionsClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/GoTrue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestFullTextSearchOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestOrderOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/SupabaseClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/SupabaseTokenManager.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +65,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }

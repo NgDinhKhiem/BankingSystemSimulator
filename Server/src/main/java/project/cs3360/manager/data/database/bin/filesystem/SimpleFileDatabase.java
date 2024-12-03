@@ -19,6 +19,24 @@ public class SimpleFileDatabase implements DataSourceHandler {
 
     public SimpleFileDatabase(Server server) {
         this.server = server;
+        initFile(ACCOUNT_BALANCE_FILE);
+        initFile(ACCOUNT_AUTH_FILE);
+        initFile(ACCOUNT_INFO_FILE);
+        initFile(TRANSACTION_FILE);
+    }
+
+    private void initFile(String filePath) {
+        File file = new File(filePath);
+
+        // Check if file exists
+        if (!file.exists()) {
+            try {
+                // Create the file
+                file.createNewFile();
+            } catch (IOException e) {
+                System.out.println("An error occurred while creating the file: " + e.getMessage());
+            }
+        }
     }
 
     private synchronized void writeToFile(String fileName, String data){
