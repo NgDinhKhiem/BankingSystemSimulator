@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/ui/TestApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BankSystemSimulator_Client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BankSystemSimulator_Client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/ui/AuthenticationView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +178,7 @@
       <workItem from="1730130990691" duration="1204000" />
       <workItem from="1733323935872" duration="76000" />
       <workItem from="1733324019406" duration="2289000" />
-      <workItem from="1733328804469" duration="1027000" />
+      <workItem from="1733328804469" duration="1951000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
