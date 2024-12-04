@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BankSystemSimulator_Client.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/ui/AuthenticationView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/Fetch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/FunctionsClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/GoTrue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestFullTextSearchOptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestOrderOptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/PostgrestResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/SupabaseClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/SupabaseTokenManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +43,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.RequestBuilder.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -64,9 +58,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.37356323",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,7 +81,7 @@
       <recent name="project.cs3360.handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.AuthenticationView">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BankSystemSimulator-DB" />
       <method v="2">
@@ -97,6 +91,19 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="BankSystemSimulator-DB" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.cs3360.ui.AuthenticationView" />
+      <module name="BankSystemSimulator-Client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.cs3360.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AuthenticationView" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.project.cs3360.utils.RequestBuilder" />
         <item itemvalue="Application.project.cs3360.utils.HttpUtils" />

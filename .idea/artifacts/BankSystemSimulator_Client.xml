@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="BankSystemSimulator-Client">
+    <output-path>$PROJECT_DIR$/out/artifacts/BankSystemSimulator_Client</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="project.cs3360.ui.AuthenticationView" />
+        <option name="description" value="Nope" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="BankSystemSimulator_Client.jar">
+        <element id="module-output" name="BankSystemSimulator-Client" />
+      </element>
+    </root>
+  </artifact>
+</component>
