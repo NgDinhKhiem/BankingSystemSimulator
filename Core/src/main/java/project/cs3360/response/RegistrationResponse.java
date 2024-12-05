@@ -1,8 +1,8 @@
 package project.cs3360.response;
 
 public class RegistrationResponse extends AbstractResponse{
-    private final boolean state;
-    private final String ID;
+    public final boolean state;
+    public final String ID;
 
     public RegistrationResponse(boolean state, String ID) {
         this.state = state;

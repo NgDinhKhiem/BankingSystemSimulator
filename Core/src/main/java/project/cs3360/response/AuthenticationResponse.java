@@ -1,8 +1,8 @@
 package project.cs3360.response;
 
 public class AuthenticationResponse extends AbstractResponse{
-    private final boolean state;
-    private final String token;
+    public final boolean state;
+    public final String token;
 
     public AuthenticationResponse(boolean state, String token) {
         this.state = state;

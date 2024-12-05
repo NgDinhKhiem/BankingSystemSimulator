@@ -19,8 +19,8 @@ public class RequestBuilder {
         Collections.addAll(this.parameters, parameters);
     }
 
-    public void add(RequestParameter para){
-        this.parameters.add(para);
+    public void add(RequestParameter... para){
+        this.parameters.addAll(List.of(para));
     }
 
     public String getRequest(){

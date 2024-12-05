@@ -1,8 +1,8 @@
 package project.cs3360.response;
 
 public class AccountBalanceResponse extends AbstractResponse{
-    private final boolean state;
-    private final double balance;
+    public final boolean state;
+    public final double balance;
 
     public AccountBalanceResponse(boolean state, double balance) {
         this.state = state;

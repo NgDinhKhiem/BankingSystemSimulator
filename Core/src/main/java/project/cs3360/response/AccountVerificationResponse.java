@@ -1,8 +1,8 @@
 package project.cs3360.response;
 
 public class AccountVerificationResponse extends AbstractResponse{
-    private final boolean state;
-    private final String receiverName;
+    public final boolean state;
+    public final String receiverName;
 
     public AccountVerificationResponse(boolean state, String receiverName) {
         this.state = state;

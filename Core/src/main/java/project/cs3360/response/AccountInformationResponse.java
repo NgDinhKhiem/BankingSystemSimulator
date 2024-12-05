@@ -1,12 +1,12 @@
 package project.cs3360.response;
 
 public class AccountInformationResponse extends AbstractResponse{
-    private final boolean state;
-    private final String ID;
-    private final String firstName;
-    private final String lastName;
-    private final String email;
-    private final String phoneNumber;
+    public final boolean state;
+    public final String ID;
+    public final String firstName;
+    public final String lastName;
+    public final String email;
+    public final String phoneNumber;
 
     public AccountInformationResponse(boolean state, String id, String firstName, String lastName, String email, String phoneNumber) {
         this.state = state;

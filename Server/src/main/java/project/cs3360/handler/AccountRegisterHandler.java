@@ -4,6 +4,7 @@ import project.cs3360.Server;
 import project.cs3360.object.Param;
 import project.cs3360.object.Response;
 import project.cs3360.object.ResponseCode;
+import project.cs3360.response.RegistrationResponse;
 
 public class AccountRegisterHandler extends AbstractHandler{
     @Param
@@ -14,6 +15,8 @@ public class AccountRegisterHandler extends AbstractHandler{
     private String phoneNumber;
     @Param
     private String email;
+    @Param
+    private String password;
 
     public AccountRegisterHandler(Server server) {
         super(server, "GET");
@@ -21,6 +24,6 @@ public class AccountRegisterHandler extends AbstractHandler{
 
     @Override
     protected Response resolve() {
-        return new Response(ResponseCode.ACCEPT, server.getDataManager().getRegistrationResponse(firstName,lastName,phoneNumber,email));
+        return new Response(ResponseCode.ACCEPT, server.getDataManager().getRegistrationResponse(firstName,lastName,phoneNumber,email,password));
     }
 }

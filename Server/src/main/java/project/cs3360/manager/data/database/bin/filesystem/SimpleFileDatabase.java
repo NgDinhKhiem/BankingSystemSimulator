@@ -4,6 +4,7 @@ import project.cs3360.Server;
 import project.cs3360.manager.data.database.DataSourceHandler;
 import project.cs3360.object.TypeHandler;
 import project.cs3360.response.*;
+import project.cs3360.utils.Utils;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -105,10 +106,9 @@ public class SimpleFileDatabase implements DataSourceHandler {
     }
 
     @Override
-    public RegistrationResponse getRegistrationResponse(String firstName, String lastName, String phoneNumber, String email) {
-        String ID = UUID.randomUUID().toString();
+    public RegistrationResponse getRegistrationResponse(String firstName, String lastName, String phoneNumber, String email, String password) {
+        String ID = Utils.generateAccountID();
         String defaultBalance = "0.0";
-        String password = "password123"; // Default password for simplicity
 
         // Store account balance
         writeToFile(ACCOUNT_BALANCE_FILE, ID + "," + defaultBalance);

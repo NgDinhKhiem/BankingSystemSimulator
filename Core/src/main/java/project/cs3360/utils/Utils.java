@@ -1,6 +1,7 @@
 package project.cs3360.utils;
 
 import java.security.SecureRandom;
+import java.util.concurrent.ThreadLocalRandom;
 
 public final class Utils {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -25,5 +26,11 @@ public final class Utils {
         StringBuilder stringBuilder = new StringBuilder();
         for(String s:lines) stringBuilder.append(s);
         return stringBuilder.toString();
+    }
+
+    public static String generateAccountID() {
+        int min = 10000000; // Smallest 8-digit number
+        int max = 99999999; // Largest 8-digit number
+        return String.valueOf(ThreadLocalRandom.current().nextInt(max - min + 1) + min);
     }
 }

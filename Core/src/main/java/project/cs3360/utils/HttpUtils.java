@@ -28,15 +28,21 @@ public final class HttpUtils {
                 connection.setRequestMethod("GET");
 
                 int responseCode = connection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) { // success
-                    try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
-                        String line;
-                        while ((line = reader.readLine()) != null) {
-                            result.append(line);
-                        }
+//                if (responseCode == HttpURLConnection.HTTP_OK) { // success
+//                    try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+//                        String line;
+//                        while ((line = reader.readLine()) != null) {
+//                            result.append(line);
+//                        }
+//                    }
+//                } else {
+//                    return "Request failed with response code: " + responseCode;
+//                }
+                try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        result.append(line);
                     }
-                } else {
-                    return "Request failed with response code: " + responseCode;
                 }
             } catch (IOException e) {
                 return "Error: " + e.getMessage();

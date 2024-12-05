@@ -48,8 +48,8 @@ public class DataManager implements DataSourceHandler {
     }
 
     @Override
-    public RegistrationResponse getRegistrationResponse(final String firstName, final String lastName, final String phoneNumber, final String email) {
-        return dataSourceHandler.getRegistrationResponse(firstName, lastName, phoneNumber, email);
+    public RegistrationResponse getRegistrationResponse(final String firstName, final String lastName, final String phoneNumber, final String email, final String password) {
+        return dataSourceHandler.getRegistrationResponse(firstName, lastName, phoneNumber, email, password);
     }
 
     @Override
