@@ -71,6 +71,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="project.cs3360.ui" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database" />
       <recent name="$PROJECT_DIR$/core/src/main/java/project/cs3360" />
@@ -188,7 +191,7 @@
       <workItem from="1733323935872" duration="76000" />
       <workItem from="1733324019406" duration="2289000" />
       <workItem from="1733328804469" duration="2355000" />
-      <workItem from="1733366453406" duration="5459000" />
+      <workItem from="1733366453406" duration="6241000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
