@@ -2,8 +2,6 @@ package project.cs3360.ui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class TestApp {
     public static void main(String[] args) {
