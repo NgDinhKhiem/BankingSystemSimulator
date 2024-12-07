@@ -1,6 +1,10 @@
 package project.cs3360;
 
 import project.cs3360.object.RequestParameter;
+import project.cs3360.object.Response;
+import project.cs3360.response.AccountInformationResponse;
+import project.cs3360.response.AuthenticationResponse;
+import project.cs3360.response.RegistrationResponse;
 import project.cs3360.utils.HttpUtils;
 import project.cs3360.utils.RequestBuilder;
 
@@ -71,7 +75,7 @@ public class Client {
         passwordLabel.setBounds(200, 200, 100, 25);
         grayBlock.add(passwordLabel);
 
-        JPasswordField passwordField = new JPasswordField();
+        JTextField passwordField = new JTextField();
         passwordField.setBounds(300, 200, 200, 25);
         grayBlock.add(passwordField);
 
@@ -157,6 +161,52 @@ public class Client {
             }
         });
 
+        loginButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(usernameField.getText()==null||usernameField.getText().isEmpty()){
+                    announcementLabel.setText("Username is empty");
+                    grayBlock.add(announcementLabel);
+                    grayBlock.revalidate();
+                    grayBlock.repaint();
+                    return;
+                }
+                if(passwordField.getText()==null||passwordField.getText().isEmpty()){
+                    announcementLabel.setText("Password is empty");
+                    grayBlock.add(announcementLabel);
+                    grayBlock.revalidate();
+                    grayBlock.repaint();
+                    return;
+                }
+                RequestBuilder requestBuilder = new RequestBuilder("http://127.0.0.1:8080/auth");
+                requestBuilder.add(
+                        new RequestParameter("ID", usernameField.getText()),
+                        new RequestParameter("password", passwordField.getText())
+                );
+
+                HttpUtils.sendGETRequest(requestBuilder.getRequest()).thenAccept(response -> {
+                    System.out.println(response);
+                    AuthenticationResponse registrationResponse = AuthenticationResponse.deserialize(response);
+                    if(registrationResponse.state){
+                        announcementLabel.setText("Login Successful");
+                        grayBlock.add(announcementLabel);
+                        grayBlock.revalidate();
+                        grayBlock.repaint();
+                        Client.this.ID = usernameField.getText();
+                        Client.this.sectionToken = registrationResponse.token;
+                        System.out.println("CALLED#2");
+                        frame.dispose();
+                        intoTheMainMenu();
+                    }else {
+                        announcementLabel.setText("Login Failed!");
+                        grayBlock.add(announcementLabel);
+                        grayBlock.revalidate();
+                        grayBlock.repaint();
+                    }
+                });
+            }
+        });
+
         registerButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -207,9 +257,19 @@ public class Client {
                         new RequestParameter("email", emailField.getText()),
                         new RequestParameter("password", registerPasswordField.getText())
                 );
-                System.out.println(requestBuilder.getRequest());
                 HttpUtils.sendGETRequest(requestBuilder.getRequest()).thenAccept(response -> {
-                    System.out.println(response);
+                    RegistrationResponse registrationResponse = RegistrationResponse.deserialize(response);
+                    if(registrationResponse.state){
+                        announcementLabel.setText("Registered Successfully Here is your ID: "+registrationResponse.ID);
+                        grayBlock.add(announcementLabel);
+                        grayBlock.revalidate();
+                        grayBlock.repaint();
+                    }else {
+                        announcementLabel.setText("Registration Failed!");
+                        grayBlock.add(announcementLabel);
+                        grayBlock.revalidate();
+                        grayBlock.repaint();
+                    }
                 });
             }
         });
@@ -223,7 +283,70 @@ public class Client {
 
     }
 
-    private void intoTheMainMenu(){
+    private void intoTheMainMenu() {
+        JFrame frame = new JFrame("User Information UI");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200, 800);
 
+        // Create a tabbed pane
+        JTabbedPane tabbedPane = new JTabbedPane();
+
+        // Create a panel for user details
+        JPanel userDetailsPanel = new JPanel();
+        userDetailsPanel.setLayout(new GridLayout(4, 2, 10, 10));
+
+        // Add user details labels and text fields
+        userDetailsPanel.add(new JLabel("User ID:"));
+        JLabel userID = new JLabel();
+        userDetailsPanel.add(userID);
+        userDetailsPanel.add(new JLabel("Name:"));
+        JLabel userName = new JLabel();
+        userDetailsPanel.add(userName);
+        userDetailsPanel.add(new JLabel("Email:"));
+        JLabel userEmail = new JLabel();
+        userDetailsPanel.add(userEmail);
+        userDetailsPanel.add(new JLabel("Phone Number:"));
+        JLabel userPhone = new JLabel();
+        userDetailsPanel.add(userPhone);
+
+        // Add the user details panel to the tabbed pane
+        tabbedPane.addTab("User Details", userDetailsPanel);
+
+        // Create a panel for user balance
+        JPanel balancePanel = new JPanel();
+        balancePanel.setLayout(new BorderLayout());
+
+        // Add a label for balance display
+        JLabel balanceLabel = new JLabel("User Balance: $0.00", SwingConstants.CENTER);
+        balanceLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        balancePanel.add(balanceLabel, BorderLayout.CENTER);
+
+        // Add the tabbed pane and balance panel to the frame
+        frame.setLayout(new BorderLayout());
+        frame.add(tabbedPane, BorderLayout.CENTER);
+        frame.add(balancePanel, BorderLayout.SOUTH);
+
+        RequestBuilder requestBuilder = new RequestBuilder("http://127.0.0.1:8080/info");
+        requestBuilder.add(
+                new RequestParameter("ID", ID),
+                new RequestParameter("token", sectionToken)
+        );
+        HttpUtils.sendGETRequest(requestBuilder.getRequest()).thenAccept(response -> {
+            AccountInformationResponse registrationResponse = AccountInformationResponse.deserialize(response);
+            if(registrationResponse.state){
+                userID.setText(registrationResponse.ID);
+                userName.setText(registrationResponse.lastName+" "+registrationResponse.firstName);
+                userEmail.setText(registrationResponse.email);
+                userPhone.setText(registrationResponse.phoneNumber);
+                frame.repaint();
+                frame.revalidate();
+            }else {
+                frame.dispose();
+                start();
+            }
+        });
+
+        // Make the frame visible
+        frame.setVisible(true);
     }
 }
