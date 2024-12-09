@@ -4,7 +4,6 @@ import project.cs3360.Server;
 import project.cs3360.object.Param;
 import project.cs3360.object.Response;
 import project.cs3360.object.ResponseCode;
-import project.cs3360.response.RegistrationResponse;
 
 public class AccountRegisterHandler extends AbstractHandler{
     @Param
