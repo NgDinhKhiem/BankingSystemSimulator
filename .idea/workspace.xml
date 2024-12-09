@@ -95,19 +95,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Client">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthenticationView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.cs3360.ui.AuthenticationView" />
       <module name="BankSystemSimulator-Client" />
@@ -169,6 +156,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BankSystemSimulator-DB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BankSystemSimulator-DB" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
