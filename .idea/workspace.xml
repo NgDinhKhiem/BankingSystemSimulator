@@ -4,12 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment=".">
+    <list default="true" id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/TransactionIDResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/TransactionListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/object/TransactionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/TransactionDataHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/UserTransactionDataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountAuth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountAuth.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountBalance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountInfo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/TypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/TypeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,97 +35,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2o4Zp4kqlZnCifc5tDrRAe4i6Y9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RequestBuilder.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven.BankSystemSimulator [install].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Downloads&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.37356323&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="project.cs3360.ui" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database" />
-      <recent name="$PROJECT_DIR$/core/src/main/java/project/cs3360" />
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/Database" />
-      <recent name="$PROJECT_DIR$/client" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/main/java" />
-      <recent name="$PROJECT_DIR$/core/src/main/java" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="project.cs3360" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.cs3360.response" />
-      <recent name="project.cs3360.handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration name="AuthenticationView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.ui.AuthenticationView" />
-      <module name="BankSystemSimulator-Client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.Client" />
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.cs3360.Test" />
       <module name="BankSystemSimulator-Client" />
       <extension name="coverage">
         <pattern>
@@ -117,138 +55,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GradientAnimation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.panel.GradientAnimation" />
-      <module name="BankSystemSimulator-Client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.panel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.Server" />
-      <module name="BankSystemSimulator-Server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.ui.TestApp" />
-      <module name="BankSystemSimulator-Client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BankSystemSimulator-DB" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.GradientAnimation" />
-        <item itemvalue="Application.TestApp" />
-        <item itemvalue="Application.AuthenticationView" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1d12e23c-cab8-422d-9188-4ccc5de6cb46" name="Changes" comment="" />
-      <created>1730130989361</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1730130989361</updated>
-      <workItem from="1730130990691" duration="1204000" />
-      <workItem from="1733323935872" duration="76000" />
-      <workItem from="1733324019406" duration="2289000" />
-      <workItem from="1733328804469" duration="2355000" />
-      <workItem from="1733366453406" duration="6241000" />
-      <workItem from="1733380504661" duration="973000" />
-      <workItem from="1733381508069" duration="3935000" />
-      <workItem from="1733386398400" duration="1018000" />
-      <workItem from="1733394144796" duration="2779000" />
-      <workItem from="1733398335203" duration="108000" />
-    </task>
-    <task id="LOCAL-00001" summary=".">
-      <option name="closed" value="true" />
-      <created>1732171329735</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732171329735</updated>
-    </task>
-    <task id="LOCAL-00002" summary=".">
-      <option name="closed" value="true" />
-      <created>1732171355458</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732171355458</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
