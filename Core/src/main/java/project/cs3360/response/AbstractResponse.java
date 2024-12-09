@@ -1,6 +1,7 @@
 package project.cs3360.response;
 
 import project.cs3360.object.TypeHandler;
+import project.cs3360.response.object.TransactionData;
 import project.cs3360.utils.JSONBuilder;
 
 import java.lang.reflect.Field;
@@ -56,7 +57,20 @@ public abstract class AbstractResponse {
         for(Field field:this.getClass().getDeclaredFields()){
             field.setAccessible(true);
             try {
-                jsonBuilder.addValue(field.getName(), field.get(this));
+                if(field.getType().equals(TransactionData[].class)){
+                    TransactionData[] transactions = (TransactionData[]) field.get(this);
+                    StringBuilder rs = new StringBuilder();
+                    rs.append("{");
+                    for(int i = 0;i<transactions.length;i++){
+                        rs.append(transactions[i].toString());
+                        if(i!=transactions.length-1){
+                            rs.append(",");
+                        }
+                    }
+                    rs.append("}");
+                    jsonBuilder.addValue(field.getName(), rs.toString());
+                }else
+                    jsonBuilder.addValue(field.getName(), field.get(this).toString());
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             }

@@ -1,5 +1,7 @@
 package project.cs3360.object;
 
+import project.cs3360.response.object.TransactionData;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -16,6 +18,8 @@ public final class TypeHandler {
         adapters.put(Boolean.class, Boolean::valueOf);
         adapters.put(boolean.class, Boolean::valueOf);
         adapters.put(UUID.class, UUID::fromString);
+        adapters.put(TransactionData.class, TransactionData::fromString);
+        adapters.put(TransactionData[].class, TransactionData::fromArrayString);
     }
 
     @SuppressWarnings("unchecked")
