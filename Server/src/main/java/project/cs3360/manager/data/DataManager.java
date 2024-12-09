@@ -58,7 +58,17 @@ public class DataManager implements DataSourceHandler {
     }
 
     @Override
-    public SendingMoneyResponse getSendingMoneyResponse(final String ID) {
-        return dataSourceHandler.getSendingMoneyResponse(ID);
+    public SendingMoneyResponse getSendingMoneyResponse(final String ID, final String receiverID, final double amount) {
+        return dataSourceHandler.getSendingMoneyResponse(ID, receiverID, amount);
+    }
+
+    @Override
+    public TransactionIDResponse getTransactionDataResponse(String transactionID) {
+        return dataSourceHandler.getTransactionDataResponse(transactionID);
+    }
+
+    @Override
+    public TransactionListResponse getTransactionInformationResponse(String ID, int startIndex, int endIndex, String startDate, String endDate) {
+        return dataSourceHandler.getTransactionInformationResponse(ID,startIndex, endIndex, startDate, endDate);
     }
 }
