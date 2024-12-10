@@ -206,14 +206,21 @@ public class SimpleFileDatabase implements DataSourceHandler {
     @Override
     public AccountBalanceResponse getAccountBalance(String ID) {
         List<String> balances = readFromFile(ACCOUNT_BALANCE_FILE);
+
         for (String balance : balances) {
             String[] details = balance.split(",");
             if (details[0].equals(ID)) {
-                return new AccountBalanceResponse(true, TypeHandler.getAdapter(Integer.class).convert(balance));
+                return new AccountBalanceResponse(true, Double.parseDouble(details[1]));
             }
         }
-        return new AccountBalanceResponse(false, -1);
+
+        // If account doesn't exist in the balance file, create a new one with balance 0
+        double defaultBalance = 0.0;
+        updateAccountBalance(ID, defaultBalance);
+
+        return new AccountBalanceResponse(true, defaultBalance);
     }
+
 
     @Override
     public AccountInformationResponse getAccountInformation(String ID) {
@@ -251,14 +258,14 @@ public class SimpleFileDatabase implements DataSourceHandler {
         String ID = Utils.generateAccountID();
         String defaultBalance = "0.0";
 
-        // Store account balance
-        writeToFile(ACCOUNT_BALANCE_FILE, ID + "," + defaultBalance);
-
         // Store account authentication
         writeToFile(ACCOUNT_AUTH_FILE, ID + "," + password);
 
         // Store account information
         writeToFile(ACCOUNT_INFO_FILE, ID + "," + firstName + "," + lastName + "," + phoneNumber + "," + email);
+
+        // Initialize account balance with a default value of 0.0
+        updateAccountBalance(ID, Double.parseDouble(defaultBalance));
 
         return new RegistrationResponse(true, ID);
     }

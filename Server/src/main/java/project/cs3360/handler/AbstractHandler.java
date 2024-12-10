@@ -32,6 +32,11 @@ public abstract class AbstractHandler implements HttpHandler {
             List<Field> fields = new java.util.ArrayList<>((List.of(child.getDeclaredFields())));
             fields.removeIf(field -> !field.isAnnotationPresent(Param.class));
             System.out.println(exchange.getRequestURI()+ " "+this.getClass().getSimpleName());
+            boolean isRaw = false;
+            if(paras.containsKey("raw")) {
+                isRaw = true;
+                paras.remove("raw");
+            }
             if(paras.size()!=fields.size()) {
                 System.out.println("SIZE DIFFERENT");
                 exchange.sendResponseHeaders(ResponseCode.BAD_REQUEST.getCode(), -1);
@@ -57,7 +62,7 @@ public abstract class AbstractHandler implements HttpHandler {
                 }
             }
             Response response = this.resolve();
-            String jsonBody = response.getResponse().serialize();
+            String jsonBody = isRaw?response.getResponse().toJSON():response.getResponse().serialize();
             exchange.sendResponseHeaders(response.getCode().getCode(), jsonBody.length());
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(jsonBody.getBytes(StandardCharsets.UTF_8));

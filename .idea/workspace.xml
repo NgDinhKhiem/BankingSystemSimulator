@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/TransactionIDResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/TransactionListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/object/TransactionData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/TransactionDataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/UserTransactionDataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/project/cs3360/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/TypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/object/TypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountBalanceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountInformationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AccountVerificationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/RegistrationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/DataSourceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountAuth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountAuth.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountBalance.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountInfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountVerificationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountVerificationHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +24,45 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2q0c64UqXv7yo8V0REaG4Q8DjPi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Server.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.cs3360.response" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.cs3360.Server" />
+      <module name="BankSystemSimulator-Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.cs3360.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.cs3360.Test" />
       <module name="BankSystemSimulator-Client" />
@@ -61,11 +78,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="" />
+      <created>1733802756420</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733802756420</updated>
+    </task>
     <servers />
   </component>
 </project>

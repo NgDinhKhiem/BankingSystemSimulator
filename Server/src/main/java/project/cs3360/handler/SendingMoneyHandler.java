@@ -12,7 +12,7 @@ public class SendingMoneyHandler extends AbstractHandler{
     private String receiverID;
     private double amount;
     public SendingMoneyHandler(Server server) {
-        super(server, "POST");
+        super(server, "GET");
     }
 
     @Override
