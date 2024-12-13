@@ -11,14 +11,14 @@ public class TransactionData {
     private final String toID;
     private final double amount;
     private final String time;
-    private String STATE; //SUCCESS/PENDING/FAIL
+    private String state; //SUCCESS/PENDING/FAIL
     public TransactionData(String transactionID, String fromID, String toID, double amount, String time, String state1) {
         this.transactionID = transactionID;
         this.fromID = fromID;
         this.toID = toID;
         this.amount = amount;
         this.time = time;
-        STATE = state1;
+        state = state1;
     }
 
     public TransactionData() {
@@ -27,7 +27,7 @@ public class TransactionData {
         this.toID = "";
         this.amount = 0;
         this.time = "";
-        STATE = "NULL";
+        state = "NULL";
     }
 
     public String getTransactionID() {
@@ -51,10 +51,10 @@ public class TransactionData {
     }
 
     public String getSTATE() {
-        return STATE;
+        return state;
     }
     public void setState(String STATE) {
-        this.STATE = STATE;
+        this.state = STATE;
     }
 
     public static TransactionData fromString(String string) {
@@ -63,9 +63,9 @@ public class TransactionData {
                 jsonBuilder.getObject("transactionID"),
                 jsonBuilder.getObject("fromID"),
                 jsonBuilder.getObject("toID"),
-                TypeHandler.getAdapter(double.class).convert(jsonBuilder.getObject("amount")),
+                TypeHandler.getAdapter(Double.class).convert(jsonBuilder.getObject("amount")),
                 jsonBuilder.getObject("time"),
-                jsonBuilder.getObject("STATE")
+                jsonBuilder.getObject("state")
         );
     }
 

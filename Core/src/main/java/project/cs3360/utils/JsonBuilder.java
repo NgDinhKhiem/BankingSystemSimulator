@@ -25,8 +25,8 @@ public class JSONBuilder {
             String key = entry.getKey();
             String value = entry.getValue();
 
-            jsonBuilder.append("\"").append(escapeString(key)).append("\"").append(":");
-            jsonBuilder.append("\"").append(escapeString(value)).append("\"");
+            jsonBuilder.append("\"").append(key).append("\"").append(":");
+            jsonBuilder.append("\"").append(value).append("\"");
 
             count++;
             if (count < size) {

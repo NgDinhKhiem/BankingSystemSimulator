@@ -39,6 +39,9 @@ public abstract class AbstractHandler implements HttpHandler {
             }
             if(paras.size()!=fields.size()) {
                 System.out.println("SIZE DIFFERENT");
+                for(String param : paras.keySet()) {System.out.print(param+ " ");}
+                System.out.println("FIELD");
+                for(Field param : fields) {System.out.print(param.getName()+ " ");}
                 exchange.sendResponseHeaders(ResponseCode.BAD_REQUEST.getCode(), -1);
                 return;
             }

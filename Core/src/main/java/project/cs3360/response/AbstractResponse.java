@@ -69,8 +69,9 @@ public abstract class AbstractResponse {
                     }
                     rs.append("}");
                     jsonBuilder.addValue(field.getName(), rs.toString());
-                }else
+                }else {
                     jsonBuilder.addValue(field.getName(), field.get(this).toString());
+                }
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             }

@@ -4,6 +4,7 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import project.cs3360.handler.*;
 import project.cs3360.manager.data.DataManager;
+import project.cs3360.manager.data.notification.NotificationManager;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -16,6 +17,7 @@ public class Server {
     private boolean isStarted = false;
     private final DataManager dataManager = new DataManager(this);
     private final ExecutorService executorService = Executors.newCachedThreadPool();
+    private final NotificationManager notificationManager = new NotificationManager();
 
     public Server(int port) throws IOException {
         this.port = port;
@@ -30,6 +32,11 @@ public class Server {
         registerHandler("/verify", new AccountVerificationHandler(this));
         registerHandler("/send", new SendingMoneyHandler(this));
         registerHandler("/auth", new AuthenticationHandler(this));
+        registerHandler("/trans_info", new TransactionDataHandler(this));
+        registerHandler("/user_trans", new UserTransactionDataHandler(this));
+        registerHandler("/deposit", new DepositHandler(this));
+        registerHandler("/notification", new NotificationHandler(this));
+        registerHandler("/test", new TestHandler(this));
     }
     private void registerHandler(String route, HttpHandler handler){
         this.server.createContext(route, handler);
@@ -63,5 +70,9 @@ public class Server {
 
     public DataManager getDataManager() {
         return dataManager;
+    }
+
+    public NotificationManager getNotificationManager() {
+        return notificationManager;
     }
 }

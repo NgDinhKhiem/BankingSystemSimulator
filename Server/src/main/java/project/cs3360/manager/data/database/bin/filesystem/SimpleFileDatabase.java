@@ -2,7 +2,7 @@ package project.cs3360.manager.data.database.bin.filesystem;
 
 import project.cs3360.Server;
 import project.cs3360.manager.data.database.DataSourceHandler;
-import project.cs3360.object.TypeHandler;
+import project.cs3360.manager.data.notification.noti.TransactionNotification;
 import project.cs3360.response.*;
 import project.cs3360.response.object.TransactionData;
 import project.cs3360.utils.Utils;
@@ -10,10 +10,15 @@ import project.cs3360.utils.Utils;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class SimpleFileDatabase implements DataSourceHandler {
+    private static final String ADMIN = "0000";
+
     private final Server server;
     private static final String ACCOUNT_BALANCE_FILE = "AccountBalance.txt";
     private static final String ACCOUNT_AUTH_FILE = "AccountAuth.txt";
@@ -82,6 +87,9 @@ public class SimpleFileDatabase implements DataSourceHandler {
     }
 
     private boolean accountExists(String accountID) {
+        if(accountID.equals(ADMIN)) {
+            return true;
+        }
         List<String> accounts = readFromFile(ACCOUNT_BALANCE_FILE);
         for (String account : accounts) {
             String[] details = account.split(",");
@@ -121,32 +129,41 @@ public class SimpleFileDatabase implements DataSourceHandler {
         updateAccountBalance(senderID, senderBalance);
         updateAccountBalance(receiverID, receiverBalance);
 
+        server.getNotificationManager().pushNotification(
+                new TransactionNotification("COMPLETED", transactionData.getTransactionID()),
+                senderID,
+                receiverID
+                );
+
         System.out.println("Transferred " + amount + " from " + senderID + " to " + receiverID);
     }
 
-    private void updateAccountBalance(String accountID, double newBalance) {
+    public boolean updateAccountBalance(String accountID, double newBalance) {
+        if(accountID.equals(ADMIN)) {return true;}
         List<String> accounts = readFromFile(ACCOUNT_BALANCE_FILE);
-        boolean updated = false;
-        List<String> updatedAccounts = new ArrayList<>();
+        boolean accountFound = false;
 
-        for (String account : accounts) {
-            String[] details = account.split(",");
-            if (details[0].equals(accountID)) {
-                updatedAccounts.add(accountID + "," + newBalance);
-                updated = true;
-            } else {
-                updatedAccounts.add(account);
+        for(int i = 0; i < accounts.size(); i++) {
+            String account = accounts.get(i);
+            String[] accountDetails = account.split(",");
+
+            if (accountDetails.length >= 2 && accountDetails[0].equals(accountID)) {
+                accounts.set(i,accountDetails[0] + "," + newBalance);
+                accountFound = true;
             }
         }
 
-        if (!updated) {
-            updatedAccounts.add(accountID + "," + newBalance);
+        if (!accountFound) {
+            // Account not found, add a new entry
+            accounts.add(accountID + "," + newBalance);
         }
 
-        writeToFile(ACCOUNT_BALANCE_FILE, String.join("\n", updatedAccounts));
+        // Write the updated accounts back to the balance file
+        writeToFile(ACCOUNT_BALANCE_FILE, String.join(",\n", accounts));
+
+        return true;
     }
 
-    // Fetch transaction data from database given transactionID
     private TransactionData fetchTransactionFromDatabase(String transactionID) {
         List<String> transactions = readFromFile(TRANSACTION_FILE);
         for (String transaction : transactions) {
@@ -155,7 +172,7 @@ public class SimpleFileDatabase implements DataSourceHandler {
                 return transactionData;
             }
         }
-        return null; // If transaction is not found, return null
+        return null;
     }
     public SimpleFileDatabase(Server server) {
         this.server = server;
@@ -169,11 +186,8 @@ public class SimpleFileDatabase implements DataSourceHandler {
 
     private void initFile(String filePath) {
         File file = new File(filePath);
-
-        // Check if file exists
         if (!file.exists()) {
             try {
-                // Create the file
                 file.createNewFile();
             } catch (IOException e) {
                 System.out.println("An error occurred while creating the file: " + e.getMessage());
@@ -182,7 +196,7 @@ public class SimpleFileDatabase implements DataSourceHandler {
     }
 
     private synchronized void writeToFile(String fileName, String data){
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false))) {
             writer.write(data);
             writer.newLine();
         } catch (IOException e) {
@@ -205,6 +219,11 @@ public class SimpleFileDatabase implements DataSourceHandler {
 
     @Override
     public AccountBalanceResponse getAccountBalance(String ID) {
+
+        if(ID.equals(ADMIN)) {
+            return new AccountBalanceResponse(true, Integer.MAX_VALUE);
+        }
+
         List<String> balances = readFromFile(ACCOUNT_BALANCE_FILE);
 
         for (String balance : balances) {
@@ -220,7 +239,6 @@ public class SimpleFileDatabase implements DataSourceHandler {
 
         return new AccountBalanceResponse(true, defaultBalance);
     }
-
 
     @Override
     public AccountInformationResponse getAccountInformation(String ID) {
@@ -256,15 +274,19 @@ public class SimpleFileDatabase implements DataSourceHandler {
     @Override
     public RegistrationResponse getRegistrationResponse(String firstName, String lastName, String phoneNumber, String email, String password) {
         String ID = Utils.generateAccountID();
-        String defaultBalance = "0.0";
+        String defaultBalance = "0";
 
         // Store account authentication
-        writeToFile(ACCOUNT_AUTH_FILE, ID + "," + password);
+        List<String> auth_accounts = readFromFile(ACCOUNT_AUTH_FILE);
+        auth_accounts.add(ID + "," + password);
+        writeToFile(ACCOUNT_AUTH_FILE, String.join(",\n", auth_accounts));
 
         // Store account information
-        writeToFile(ACCOUNT_INFO_FILE, ID + "," + firstName + "," + lastName + "," + phoneNumber + "," + email);
+        List<String> info_accounts = readFromFile(ACCOUNT_INFO_FILE);
+        info_accounts.add(ID + "," + firstName + "," + lastName + "," + phoneNumber + "," + email);
+        writeToFile(ACCOUNT_INFO_FILE, String.join(",\n", info_accounts));
 
-        // Initialize account balance with a default value of 0.0
+        // Initialize account balance
         updateAccountBalance(ID, Double.parseDouble(defaultBalance));
 
         return new RegistrationResponse(true, ID);
@@ -297,16 +319,16 @@ public class SimpleFileDatabase implements DataSourceHandler {
         return new SendingMoneyResponse(true, transactionID);
     }
 
-
     @Override
     public TransactionIDResponse getTransactionDataResponse(String transactionID) {
-        // Read all transactions from the transaction file
         List<String> transactions = readFromFile(TRANSACTION_FILE);
 
         for (String transaction : transactions) {
             TransactionData transactionData = TransactionData.fromString(transaction);
-
+            //System.out.println(transactionData);//state
+            //System.out.println(transactionData.toString());
             if (transactionData.getTransactionID().equals(transactionID)) {
+                //return new TransactionIDResponse(new TransactionData());
                 return new TransactionIDResponse(transactionData);
             }
         }
@@ -316,59 +338,72 @@ public class SimpleFileDatabase implements DataSourceHandler {
 
     @Override
     public TransactionListResponse getTransactionInformationResponse(String ID, int startIndex, int endIndex, String startDate, String endDate) {
-        // Read all transactions from the transaction file
         List<String> transactions = readFromFile(TRANSACTION_FILE);
         List<TransactionData> filteredTransactions = new ArrayList<>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
         for (String transaction : transactions) {
             TransactionData transactionData = TransactionData.fromString(transaction);
 
-            // Filter transactions where the given ID is either sender or receiver
             if (transactionData.getFromID().equals(ID) || transactionData.getToID().equals(ID)) {
-                // Optionally filter by date range
-                if (!startDate.isEmpty() && !endDate.isEmpty()) {
-                    try {
-                        // Adjusted date-time format to include hours, minutes, seconds, and milliseconds
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
-                        Date transactionDate = sdf.parse(transactionData.getTime());
-                        Date start = sdf.parse(startDate);
-                        Date end = sdf.parse(endDate);
+                if (!(startDate.equals("-1") || startDate.equals("*") || endDate.equals("-1") || endDate.equals("*"))) {
+                    if (!startDate.isEmpty() && !endDate.isEmpty()) {
+                        try {
+                            Date transactionDate = sdf.parse(transactionData.getTime());
+                            Date start = sdf.parse(startDate);
+                            Date end = sdf.parse(endDate);
 
-                        if (transactionDate.before(start) || transactionDate.after(end)) {
-                            continue;
+                            if (transactionDate.before(start) || transactionDate.after(end)) {
+                                continue;
+                            }
+                        } catch (ParseException e) {
+                            throw new RuntimeException("Error parsing date: " + e.getMessage());
                         }
-                    } catch (ParseException e) {
-                        throw new RuntimeException("Error parsing date: " + e.getMessage());
                     }
                 }
-
                 filteredTransactions.add(transactionData);
             }
         }
 
-        // Apply index filtering
-        if (startIndex >= 0 && endIndex < filteredTransactions.size() && startIndex <= endIndex) {
-            filteredTransactions = filteredTransactions.subList(startIndex, endIndex + 1);
+        filteredTransactions.sort((t1, t2) -> {
+            try {
+                Date date1 = sdf.parse(t1.getTime());
+                Date date2 = sdf.parse(t2.getTime());
+                return date2.compareTo(date1);
+            } catch (ParseException e) {
+                throw new RuntimeException("Error parsing transaction dates: " + e.getMessage());
+            }
+        });
+
+        if (startIndex != -1 && endIndex != -1) {
+            if (startIndex >= 0 && endIndex < filteredTransactions.size() && startIndex <= endIndex) {
+                filteredTransactions = filteredTransactions.subList(startIndex, endIndex + 1);
+            } else if (startIndex >= 0 && startIndex < filteredTransactions.size()) {
+                filteredTransactions = filteredTransactions.subList(startIndex, filteredTransactions.size());
+            } else {
+                filteredTransactions.clear();
+            }
         }
 
         return new TransactionListResponse(filteredTransactions.toArray(new TransactionData[0]));
     }
+
 
     private synchronized void saveTransactionIDToDatabase(TransactionData transactionData) {
         List<String> transactions = readFromFile(TRANSACTION_FILE);
 
         boolean transactionExists = false;
         for (int i = 0; i < transactions.size(); i++) {
-            String[] parts = transactions.get(i).split(",");
-            if (parts[0].equals(transactionData.getTransactionID())) {
-                transactions.set(i, transactionData.getTransactionID() + "," + transactionData.getSTATE());
+            TransactionData existingTransaction = TransactionData.fromString(transactions.get(i));
+            if (existingTransaction.getTransactionID().equals(transactionData.getTransactionID())) {
+                transactions.set(i, transactionData.toString());
                 transactionExists = true;
                 break;
             }
         }
 
         if (!transactionExists) {
-            transactions.add(transactionData.getTransactionID() + "," + transactionData.getSTATE());
+            transactions.add(transactionData.toString());
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(TRANSACTION_FILE, false))) {
