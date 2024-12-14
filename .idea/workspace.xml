@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/NotificationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/ChangePasswordHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/DepositHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/InformationChangeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/NotificationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/TestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/WithdrawHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/notification/NotificationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/notification/noti/AbstractNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/notification/noti/TransactionNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountAuth.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/AbstractResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/response/SendingMoneyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/JsonBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/JsonBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AbstractHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/SendingMoneyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/filesystem/SimpleFileDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transaction.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/project/cs3360/response/object/TransactionData.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/project/cs3360/response/object/TransactionData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/TransactionDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/TransactionDataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/UserTransactionDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/project/cs3360/handler/UserTransactionDataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/project/cs3360/Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,30 +22,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2q0c64UqXv7yo8V0REaG4Q8DjPi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Server.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.cs3360.handler" />
