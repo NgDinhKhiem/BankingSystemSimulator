@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/client/src/main/java/project/cs3360/Test.java" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +106,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733802756420</updated>
-      <workItem from="1733998947505" duration="10795000" />
+      <workItem from="1733998947505" duration="11394000" />
+      <workItem from="1734319321311" duration="710000" />
     </task>
     <servers />
   </component>

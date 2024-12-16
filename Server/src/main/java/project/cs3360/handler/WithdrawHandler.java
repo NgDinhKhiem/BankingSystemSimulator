@@ -23,7 +23,6 @@ public class WithdrawHandler extends AbstractHandler{
         if(!server.getDataManager().isValid(this.ID, this.token)){
             return new Response(ResponseCode.ACCEPT, new SendingMoneyResponse(false, "null"));
         }
-
         return new Response(ResponseCode.ACCEPT, server.getDataManager().getSendingMoneyResponse(ID,"0000",amount));
     }
 }
