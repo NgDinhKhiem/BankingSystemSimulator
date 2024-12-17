@@ -4,33 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="">
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/project/cs3360/Test.java" beforeDir="false" />
-=======
+    <list default="true" id="2d447042-0a45-4d9c-b5ce-1788b62528ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountBalance.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2q0c64UqXv7yo8V0REaG4Q8DjPi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2qKxb9g9TZNVp7AOIpIy6dyxTAx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +31,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -46,50 +38,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="project.cs3360.handler" />
-      <recent name="project.cs3360.response" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Server">
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.Server" />
-      <module name="BankSystemSimulator-Server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project.cs3360.Test" />
-      <module name="BankSystemSimulator-Client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.cs3360.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Test" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -101,13 +52,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0100afb7-45db-41cc-9fc7-92369d3c0091" name="Changes" comment="" />
-      <created>1733802756420</created>
+      <changelist id="2d447042-0a45-4d9c-b5ce-1788b62528ed" name="Changes" comment="" />
+      <created>1734425138983</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733802756420</updated>
-      <workItem from="1733998947505" duration="11394000" />
-      <workItem from="1734319321311" duration="710000" />
+      <updated>1734425138983</updated>
+      <workItem from="1734425141292" duration="1553000" />
+      <workItem from="1734436756612" duration="628000" />
     </task>
     <servers />
   </component>

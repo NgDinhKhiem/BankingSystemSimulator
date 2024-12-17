@@ -38,7 +38,7 @@ public class AccountRegisterHandler extends AbstractHandler{
             return nullResponse;
         }
 
-        if (email == null || email.isEmpty()) {
+        if (email == null || email.isEmpty() || Utils.isValidEmail(email)) {
             return nullResponse;
         }
 

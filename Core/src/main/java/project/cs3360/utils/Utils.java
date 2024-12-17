@@ -47,4 +47,16 @@ public final class Utils {
 
         return phoneNumber != null && pattern.matcher(phoneNumber).matches();
     }
+
+    public static boolean isValidEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return false;
+        }
+
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+
+        return email.matches(emailRegex);
+    }
+
 }
