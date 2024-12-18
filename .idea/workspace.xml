@@ -7,8 +7,6 @@
     <list default="true" id="2d447042-0a45-4d9c-b5ce-1788b62528ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountBalance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/project/cs3360/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Transaction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +39,26 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.cs3360.Server" />
+      <module name="BankSystemSimulator-Server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.cs3360.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,6 +77,7 @@
       <updated>1734425138983</updated>
       <workItem from="1734425141292" duration="1553000" />
       <workItem from="1734436756612" duration="628000" />
+      <workItem from="1734510155986" duration="1494000" />
     </task>
     <servers />
   </component>
