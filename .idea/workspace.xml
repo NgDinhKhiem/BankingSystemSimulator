@@ -5,14 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d447042-0a45-4d9c-b5ce-1788b62528ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/sql/MarinaSQLDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/sql/MySQLDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/database/bin/supabase/SupaBaseDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/manager/data/notification/noti/MessageNotification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AccountBalance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Transaction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountAuth.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountBalance.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AccountInfo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/project/cs3360/handler/AccountRegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,19 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="project.cs3360.manager.data.notification.noti" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.cs3360.Server" />
@@ -77,7 +97,8 @@
       <updated>1734425138983</updated>
       <workItem from="1734425141292" duration="1553000" />
       <workItem from="1734436756612" duration="628000" />
-      <workItem from="1734510155986" duration="1494000" />
+      <workItem from="1734510155986" duration="1694000" />
+      <workItem from="1734578876526" duration="9080000" />
     </task>
     <servers />
   </component>

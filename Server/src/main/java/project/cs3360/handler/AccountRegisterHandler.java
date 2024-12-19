@@ -25,24 +25,32 @@ public class AccountRegisterHandler extends AbstractHandler{
 
     @Override
     protected Response resolve() {
+        if(email!=null){
+            email = email.replace("%3dot%3",".");
+        }
         Response nullResponse = new Response(ResponseCode.ACCEPT, new RegistrationResponse(false, "INVALID REGISTRATION"));
         if(firstName == null || firstName.isEmpty()) {
+            System.out.println("firstName is null or empty");
             return nullResponse;
         }
 
         if(lastName == null || lastName.isEmpty()) {
+            System.out.println("lastName is null or empty");
             return nullResponse;
         }
 
         if (phoneNumber == null || phoneNumber.isEmpty()|| !Utils.isValidPhoneNumber(phoneNumber)) {
+            System.out.println("phoneNumber is null or empty");
             return nullResponse;
         }
 
         if (email == null || email.isEmpty() || Utils.isValidEmail(email)) {
+            System.out.println("email is null or empty");
             return nullResponse;
         }
 
         if(password == null || password.isEmpty()) {
+            System.out.println("password is null or empty");
             return nullResponse;
         }
 

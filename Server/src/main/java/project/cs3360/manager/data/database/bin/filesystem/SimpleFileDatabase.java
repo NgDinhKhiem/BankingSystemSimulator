@@ -209,6 +209,8 @@ public class SimpleFileDatabase implements DataSourceHandler {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
+                if(line.endsWith("."))
+                    line = line.substring(0, line.length() - 1);
                 lines.add(line);
             }
         } catch (IOException e) {
